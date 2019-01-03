@@ -26,7 +26,9 @@ public class Program {
         System.out.printf(formatString, "Unit", "Magnitude");
         System.out.printf(formatString, "F", converter.toFahrenheit());
         System.out.printf(formatString, "C", converter.toCelsius());
-        // System.out.printf(formatString, "K", converter.toKelvin());
-        // System.out.printf(formatString, "R", converter.toRankine());
+        System.out.printf(formatString, "K", converter.toKelvin());
+        System.out.printf(formatString, "R", converter.toRankine());
+        System.out.printf(formatString, "N", converter.toNewton());
+        System.out.printf(formatString, "Re", converter.toRéaumur());
     }
 }
