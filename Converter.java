@@ -7,20 +7,21 @@ public class Converter {
 
     public Double toCommonUnit(Double magnitude,String unit) {
 //        The common unit in this case is Fahrenheit
-        if (unit.equals("F")) {
-            return magnitude;
-        } else if (unit.equals("C")) {
-            return magnitude * 9 / 5 + 32;
-        } else if (unit.equals("K")) {
-            return ((magnitude - 273.15) * 9 / 5 + 32);
-        } else if (unit.equals("R")) {
-            return magnitude + 459.67;
-        } else if (unit.equals("N")) {
-            return ((magnitude - 32) * 11 / 60);
-        } else if (unit.equals("Re")) {
-            return (magnitude - 32) * 4 / 9;
-        } else {
-            return null;
+        switch (unit) {
+            case "F":
+                return magnitude;
+            case "C":
+                return magnitude * 9 / 5 + 32;
+            case "K":
+                return ((magnitude - 273.15) * 9 / 5 + 32);
+            case "R":
+                return magnitude + 459.67;
+            case "N":
+                return ((magnitude - 32) * 11 / 60);
+            case "Re":
+                return (magnitude - 32) * 4 / 9;
+            default:
+                return null;
         }
     }
 
