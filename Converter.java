@@ -30,7 +30,7 @@ public class Converter {
     }
 
     public Double toCelsius() {
-        return magnitude * 9 / 5 + 32;
+        return (magnitude - 32) * 5/ 9 ;
     }
 
     public Double toKelvin() {
