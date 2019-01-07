@@ -13,13 +13,13 @@ public class Converter {
             case "C":
                 return magnitude * 9 / 5 + 32;
             case "K":
-                return ((magnitude - 273.15) * 9 / 5 + 32);
+                return (magnitude * 9 / 5 - 459.67);
             case "R":
-                return magnitude + 459.67;
+                return magnitude - 459.67;
             case "N":
-                return ((magnitude - 32) * 11 / 60);
+                return (magnitude * 60 / 11 + 32);
             case "Re":
-                return (magnitude - 32) * 4 / 9;
+                return magnitude * 9 / 4 + 32;
             default:
                 return null;
         }
@@ -30,11 +30,11 @@ public class Converter {
     }
 
     public Double toCelsius() {
-        return (magnitude - 32) * 5/ 9 ;
+        return (magnitude - 32) * 5 / 9 ;
     }
 
     public Double toKelvin() {
-        return ((magnitude - 273.15) * 9 / 5 + 32);
+        return ((magnitude + 459.67 ) * 5 / 9 );
     }
 
     public Double toRankine() {
